@@ -1,0 +1,55 @@
+
+version: '3'
+
+services:
+  mongo-primary:
+    image: mongo
+    command: mongod --replSet replica01
+    ports:
+      - "27017:27017"
+    networks:
+      - testing01
+
+  mongo-secondary1:
+    image: mongo
+    command: mongod --replSet replica01
+    ports:
+      - "27018:27017"
+    networks:
+      - testing01
+    
+  mongo-secondary2:
+    image: mongo
+    command: mongod --replSet replica01
+    ports:
+      - "27019:27017"
+    networks:
+      - testing01
+
+  mongo-secondary3:
+    image: mongo
+    command: mongod --replSet replica01
+    ports:
+      - "27020:27017"
+    networks:
+      - testing01
+
+  redis01:
+    image: redis/redis-stack:latest
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+
+    networks:
+      - testing01
+    depends_on:
+      - mongo-primary
+      - mongo-secondary1
+      - mongo-secondary2
+      - mongo-secondary3
+
+networks:
+  testing01:
+
+
+ 
