@@ -1,4 +1,5 @@
 const tiendaModel = require('../modelos/tiendaModels');
+const cache = require('../cache/cache');
 
 async function getUsuarios(req, res) {
     try {
@@ -39,7 +40,7 @@ async function getUsuarios(req, res) {
 
 
 // Q1. Listar los productos de una categoría específica.
-const getProductosPorCategoria = async (req, res) => {
+const getProductosPorCategoria= async (req, res) => {
     try {
         const { categoria } = req.params; // La categoría se pasa como parámetro en la URL
 
@@ -68,7 +69,7 @@ const getProductosPorCategoria = async (req, res) => {
                 message: "No se encontraron productos para esta categoría.",
             });
         }
-
+        res.data = productos;
         // Devolver los productos encontrados
         res.status(200).json({
             message: "Q1. Listar los productos de una categoría específica.",
@@ -122,6 +123,7 @@ const getProductosPorMarca = async (req, res) => {
             });
         }
 
+        res.data = productos;
         // Responder con los productos encontrados
         res.status(200).json({
             success: true,
@@ -168,7 +170,8 @@ const getProductosYClientesPorMarca = async (req, res) => {
                 }
             }
         ]);
-
+        
+        res.data = resultado;
         // Respondemos con los resultados
         res.status(200).json({
             message: "Q3. Listar los productos de una marca específica y los clientes que los han agregado a su carrito.",
@@ -233,6 +236,7 @@ const getProductosCarritoCliente = async (req, res) => {
             });
         }
 
+        res.data = resultado;
         res.status(200).json({ 
             message: "Q4. Listar los productos que ha agregado un cliente en específico a su carrito de compras.",
             success: true, 
@@ -308,6 +312,7 @@ const getComentariosPorValoracion = async (req, res) => {
         });
       }
   
+      res.data = resultado;
       res.status(200).json({ 
         message: "Q5. Listar los productos con mejores valoraciones.",
         success: true,
@@ -362,6 +367,7 @@ const getProductosMasAgregados = async (req, res) => {
         });
       }
   
+      res.data = resultado;
       res.status(200).json({
          message:"Q6.  Listar los productos más agregados a los carritos de compra." ,
          success: true, 
@@ -409,6 +415,7 @@ const getPedidosPorUsuario = async (req, res) => {
         });
       }
   
+      res.data = resultado; 
       res.status(200).json({ success: true, data: resultado });
     } catch (error) {
       res.status(500).json({
@@ -462,6 +469,7 @@ const getPedidosPorUsuario = async (req, res) => {
         });
       }
   
+      res.data = resultado;
       res.status(200).json({ 
         message: "Q8. Listar todos los productos que ha adquirido un cliente en específico.",
         success: true, data: resultado });
@@ -504,6 +512,7 @@ const getProductosEnCarritoPorUsuario = async (req, res) => {
         });
       }
   
+      res.data = resultado;
       res.status(200).json({ success: true, data: resultado });
     } catch (error) {
       res.status(500).json({
