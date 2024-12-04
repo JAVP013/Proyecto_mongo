@@ -1,4 +1,4 @@
-const tiendaModel = require('../modelos/TiendaModels');
+const tiendaModel = require('../modelos/tiendaModels');
 
 async function getUsuarios(req, res) {
     try {

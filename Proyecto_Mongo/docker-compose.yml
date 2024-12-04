@@ -32,7 +32,7 @@ services:
     ports:
       - "27020:27017"
     networks:
-      - testing01
+      - testing01 
 
   redis01:
     image: redis/redis-stack:latest

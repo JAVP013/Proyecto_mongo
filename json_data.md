@@ -1,7 +1,8 @@
 /** 
 * Paste one or more documents here
 */
-{
+{ 
+    "_id": "1",
   "nombre": "Tienda Centro",
   "direccion": "Av. Central 123",
   "productos": [
