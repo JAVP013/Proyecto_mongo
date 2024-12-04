@@ -1,14 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const usiarioRutas = require('./routas/usuariosRutas');
+const tiendaRutas = require('./routas/tiendaRutas');
 const cors = require('cors');
 
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/api/usuarios', usiarioRutas);
+app.use('/api/tiendas', tiendaRutas);
 
 app.get('/', (req, res) => {
     res.send('hola mundo'); 
