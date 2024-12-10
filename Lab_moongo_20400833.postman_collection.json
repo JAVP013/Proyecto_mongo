@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "47b2ad78-25cb-431d-8adf-6a6dc9a89476",
+		"name": "Lab_moongo_20400833",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38006175"
+	},
+	"item": [
+		{
+			"name": "Q1. Listar los productos de una categoría específica.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos/categoria/Camisetas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos",
+						"categoria",
+						"Camisetas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q2. Listar los productos de una marca específica.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos/marca/Nike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos",
+						"marca",
+						"Nike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q3. Listar los productos de una marca específica y los clientes que los han agregado a su carrito.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos/marca/Nike/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos",
+						"marca",
+						"Nike",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q4. Listar los productos que ha agregado un cliente en específico a su carrito de compras.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos/cliente/Juan%20Pérez",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos",
+						"cliente",
+						"Juan%20Pérez"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q5. Listar los productos con mejores valoraciones.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/comentarios/valoracion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"comentarios",
+						"valoracion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q6.  Listar los productos más agregados a los carritos de compra.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos/mas-agregados",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos",
+						"mas-agregados"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q7. Listar todos los pedidos (incluyendo los productos) de un cliente en específico.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/pedidos/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"pedidos",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q8. Listar todos los productos que ha adquirido un cliente en específico.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos/pedido/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos",
+						"pedido",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Q9  Listar todos los Clientes que han comprado un producto en específico.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/tiendas/productos-en-carrito/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tiendas",
+						"productos-en-carrito",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
